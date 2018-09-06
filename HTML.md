@@ -1,28 +1,28 @@
 # HTML
 
-A HTML (HyperText Markup Language) egy leíró nyelv, ami a weboldal tartalom struktúrájáért felel, a vázát adja és a tartalmat jelentéssel látja el.
+A HTML (HyperText Markup Language) egy leíró nyelv, ami a weboldal tartalom struktúrájáért felel, a vázát adja és a tartalom egyes elemeit jelentéssel látja el.
 
-## A HTML szintaktikája
+## A HTML elemek és azok szintaktikája
 
 A HTML építőkövei a HTML elemek. Egy elem a legtöbb esetben egy nyitó címkéből, egy záró címkéből és a közte lévő tartalomból épül fel. Valamint a nyitó címke attribútumokat tartalmazhat, amik többlet információval látják el az elemet.
 
 `<a href="http://oander.hu" target="_blank">...</a>`
 
-- az `<a>...</a>` maga az elem
-- az `<a>` a nyitó címke
-- az `</a>` a záró címke
-- a `href="http://oander.hu"` az attribútum
+- az `<a>... ide kerül a tartalom ...</a>` a HTML elem
+- az `<a>` az elem nyitó címkéje
+- az `</a>` az elem záró címkéje
+- a `href="http://oander.hu"` az elem egyik attribútuma
 
-Vannak olyan elemek, amik nem rendelkeznek záró címkével, így értelemszerűen tartalom sem lehet a két tag között. Ezek az elemek az attribútumok segítségével kapják meg az információt.
+Vannak olyan elemek, amik nem rendelkeznek záró címkével, így értelemszerűen tartalom sem lehet a két címke között. Ezek az elemek az attribútumok segítségével kapják meg az információt.
 
 Ilyen elemek például:
 
-- `<img>`
-- `<input>`
-- `<br>`
-- `<hr>`
-- `<link>`
-- `<meta>`
+- `<img>` - képet definiáló elem
+- `<input>` - űrlap mezőt meghatározó elem
+- `<br>` - sortörés egy szövegben
+- `<hr>` - elválasztó vonalat jelölő elem
+- `<link>` - külső stíluslap behúzására szolgáló elem
+- `<meta>` - a weboldal head részében használható, meta információkat szolgáltató elem (SEO adatok, karakterkódolás stb.)
 
 A HTML elemek teljes listája (csoportosítva is):
 https://www.w3schools.com/tags/ref_byfunc.asp
@@ -30,7 +30,7 @@ http://html5doctor.com/element-index/
 
 ## A HTMl elemek csoportosítása
 
-A HTML elemeknek két fő csoportja van: block és inline elemek. A block elemek mindig 100% szélességben kitöltik a rendelkezésre álló teret, míg az inline elemek nem. Az elemek ezen tulajdonságát CSS-ből lehet módosítani.
+A HTML elemeknek két fő csoportja van: block és inline elemek. A block elemek mindig 100% szélességben kitöltik a rendelkezésre álló teret, függetlenül attól milyen hosszú tartalom van az elemben. Az előttük és utánuk lévő elem mindig új sorban kezdődik a böngészőben. Ezzel szemben az inline elemek csak akkora szélességet foglalnak el, amekkora a tartalmuk, mellettük elhelyezkedhet további elemek. Az elemek block vagy inline tulajdonságát CSS-ből lehet módosítani.
 
 Példa blokk elemre:
 
@@ -45,26 +45,39 @@ Példa inline elemre:
 - `<a>` - hivatkozás elem
 - `<strong>` - félkövér szöveget jelöl, jelentés tartalommal bír
 - `<b>` - félkövér szöveget jelöl, nincs jelentés tartalma, csak stílust határoz meg
-- `<img>` - képet jeölő elem
+- `<img>` - képet jelölő elem
 
-Teljes lista:
+Teljes lista az elemek block / inline csoportosításáról:
 https://www.w3schools.com/html/html_blocks.asp
 
 ## A HTML elemek attribútumai
 
-Az attribútumok között vannak olyanok, amik globálisak, bármelyik elem tartalmazhatja.
+A HTML elemek egy vagy több attribútumot tartalmazhatnak, több esetén szóközzel elválasztva. Az attribútumok felépítése a következő:
 
-Ilyen attribútumok például:
+`href="http://oander.hu" target="_blank"`
+
+- a `href` az attribútum neve
+- az `=` az összekapcsolás
+- a `"http://oander.hu"` az attribútum értéke
+
+Az attribútumok értéke nagyon változatos lehet. Tartalmazhat pl. egy url címet, egy szöveget, egy paramétert vagy több paramétert.
+
+Néhány példa attribútumok érték típusaira:
+
+- `alt="Ez itt egy kép leírása"` - szöveges érték
+- `href="http://oander.hu"` - url érték
+- `type="text"` - egy paraméter
+- `class="button button-large button-red"` - több paraméter szóközzel elválasztva
+- `content="width=device-width, initial-scale=1.0"` - több paraméter vesszővel elválasztva
+
+Az attribútumok között vannak olyanok, amik globálisak, bármelyik elemen el lehet helyezni:
 
 - `id` - egyedi azonosítóval látja el az elemet
-- `class` - csoportosíthatjuk vele az elemet
+- `class` - osztály azonosítóval látja el az elemet
 - `style` - egyedi stílust tehetünk az elemre
 - `title` - címmel láthatjuk el az elemet
 
-Teljes lista a globális elemekről:
-https://www.w3schools.com/tags/ref_standardattributes.asp
-
-Valamint léteznek elem specifikus attribútumok, például
+Valamint léteznek elem specifikus attribútumok (zárójelben azon elemek, ahol elhelyezhetőek):
 
 - `href` (link, a) - hivatkozás egy forrásra
 - `src` (img, script) - megjelöljük mi a forrás
@@ -72,6 +85,9 @@ Valamint léteznek elem specifikus attribútumok, például
 
 Teljes attribútum lista (az on-al kezdődőek kihagyhatóak, nagyon ritkán használjuk)
 https://www.w3schools.com/tags/ref_attributes.asp
+
+Teljes lista a globális attribútumokról:
+https://www.w3schools.com/tags/ref_standardattributes.asp
 
 ## A weboldalak alap felépítése
 
