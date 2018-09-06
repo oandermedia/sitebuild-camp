@@ -184,3 +184,8 @@ Szemantikusság szempontjából legfontosabb elemek:
 
 Részletesebb leírást ezekről az elemekről itt olvashattok:
 http://html5doctor.com/article-archive/
+
+## Hasznos linkek
+
+HTML validáló - http://validator.w3.org/#validate_by_input
+HTML elemek és CSS tulajdonságok böngésző kompatibilitása - https://caniuse.com/
