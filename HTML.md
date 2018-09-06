@@ -2,7 +2,7 @@
 
 A HTML (HyperText Markup Language) egy leíró nyelv, ami a weboldal tartalom struktúrájáért felel, a vázát adja és a tartalom egyes elemeit jelentéssel látja el.
 
-## A HTML elemek és azok szintaktikája
+## A HTML elemek és szintaktikájuk
 
 A HTML építőkövei a HTML elemek. Egy elem a legtöbb esetben egy nyitó címkéből, egy záró címkéből és a közte lévő tartalomból épül fel. Valamint a nyitó címke attribútumokat tartalmazhat, amik többlet információval látják el az elemet.
 
@@ -28,7 +28,7 @@ A HTML elemek teljes listája (csoportosítva is):
 https://www.w3schools.com/tags/ref_byfunc.asp
 http://html5doctor.com/element-index/
 
-## A HTMl elemek csoportosítása
+## A HTML elemek csoportosítása
 
 A HTML elemeknek két fő csoportja van: block és inline elemek. A block elemek mindig 100% szélességben kitöltik a rendelkezésre álló teret, függetlenül attól milyen hosszú tartalom van az elemben. Az előttük és utánuk lévő elem mindig új sorban kezdődik a böngészőben. Ezzel szemben az inline elemek csak akkora szélességet foglalnak el, amekkora a tartalmuk, mellettük elhelyezkedhet további elemek. Az elemek block vagy inline tulajdonságát CSS-ből lehet módosítani.
 
@@ -50,7 +50,7 @@ Példa inline elemre:
 Teljes lista az elemek block / inline csoportosításáról:
 https://www.w3schools.com/html/html_blocks.asp
 
-## A HTML elemek attribútumai
+## A HTML elemek attribútumai és szintaktikájuk
 
 A HTML elemek egy vagy több attribútumot tartalmazhatnak, több esetén szóközzel elválasztva. Az attribútumok felépítése a következő:
 
@@ -69,6 +69,8 @@ Néhány példa attribútumok érték típusaira:
 - `type="text"` - egy paraméter
 - `class="button button-large button-red"` - több paraméter szóközzel elválasztva
 - `content="width=device-width, initial-scale=1.0"` - több paraméter vesszővel elválasztva
+
+## A HTML elemek attribútumainak csoportosítása
 
 Az attribútumok között vannak olyanok, amik globálisak, bármelyik elemen el lehet helyezni:
 
@@ -89,11 +91,13 @@ https://www.w3schools.com/tags/ref_attributes.asp
 Teljes lista a globális attribútumokról:
 https://www.w3schools.com/tags/ref_standardattributes.asp
 
-## A weboldalak alap felépítése
+## A HTML elemek struktúrája, a DOM
 
-A HTML elemek szülő - gyermek kapcsolatban állnak egymással. Így jön létre egy szerkezet, a weboldal váza, amit DOM-nak (Document Object Model) hívunk. Tehát egy HTML elem vagy egy másik HTML elemet tartalmaz vagy már magát a szöveges tartalmat.
+Egy HTML elem (a záró címke nélküli elemek kivételével) tartalma lehet egy szöveg vagy egy másik HTML elem. Utóbbi esetben ezzel az egymásba ágyazással az elemek között egy szülő - gyermek kapcsolat, valamint az egy szinten lévő, egymást követő HTML elemek között egy testvér - testvér kapcsolat jön létre. Ezen kapcsolatok által kialakul egy szerkezet, ami a weboldal váza. Ezt nevezzük DOM-nak (Document Object Model).
 
-Létezik több olyan elem, amik szinte bárminek lehet szülője vagy gyermeke, viszont sok elem csak bizonyos elemeknek lehet szülője vagy gyermeke. Erre néhány példa:
+Szabályozva van viszont, hogy az elemeknek milyen gyermek elemeik lehetnek, illetve mi lehet a szülő elemük. Ezeket a szabályokat a későbbi órák folyamán fokozatosan át fogjuk venni, amikor az elemek egy-egy csoportjáról tanulunk.
+
+Említés szintjén néhány példa álljon itt:
 
 ```html
 <ul>
@@ -101,7 +105,8 @@ Létezik több olyan elem, amik szinte bárminek lehet szülője vagy gyermeke, 
 </ul>
 ```
 
-Tehát itt az `<ul>` -be nem tehetünk másféle elemet és a `<li>` elemet sem használhatjuk ezen kívül, de pl. egy `<ol>` elembe bele lehet tenni ugyanígy a `<li>` elemet.
+Az `<ul>` elemnek csakis a `<li>` elemek lehetnek a gyermekei, a `<li>` elem viszont rendelkezhet másik szülővel, például az `<ol>` elembe is elhelyezhető.
+A `<li>` elemnek viszont már nagyon sokféle gyermek eleme lehet, pl. egy `<a>` vagy egy `<div>` elem.
 
 ```html
 <dl>
@@ -110,25 +115,58 @@ Tehát itt az `<ul>` -be nem tehetünk másféle elemet és a `<li>` elemet sem 
 </dl>
 ```
 
-Ezekről később egy nagyobb témánál lesz szó, mi minek lehet a gyermeke és szülője.
+Itt kicsit más a helyzet, a `<dl>` elem `<dt>` és `<dd>` elemeket tartalmazhat. Ezek az elemek pedig csak a `<dl>` elem gyermekei lehetnek.
 
-Egy website alap felépítése:
+## A weboldal alap felépítése
+
+Minden weboldalnak a következő HTML szerkezettel kell kezdődnie:
 
 ```html
 <!DOCTYPE html>
 <html lang="hu">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello World</title>
+    ... nem látható, de fontos információk ...
   </head>
   <body>
-    <h1>Hello World</h1>
-    <p>This is a web page.</p>
+    ... látható tartalom ...
   </body>
 </html>
 ```
+
+- a `<!DOCTYPE html>` mondja meg a böngészőnek, hogy a weboldalunk milyen szabálykönyv szerint íródott
+- a `<html>` elem minden weboldal első HTML eleme, ez definiálja a teljes weboldalt
+- a `lang="hu"` attribútum tájékoztatja a böngészőt az oldalunk nyelvéről
+- a `<head>` elem tartalmazza a weboldalunk 'nem látható', de fontos információit
+- a `<body>` elem tartalmazza a weboldal látható részét, tartalmát
+
+## A head rész elemei
+
+Az oldalunk `<head>` elemébe a következő elemek kerülhetnek:
+
+```html
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ... további meta elemek (pl. SEO keywords, description stb.)
+  
+  <title>Hello World</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js">Hello World</script>
+  
+  <style>
+    ... belső stíluslap ...
+  </style>
+  <script>
+    ... belső script ...
+  </script>
+</head>
+```
+
+- többféle meta elemet tartalmazhat a weboldalunk, de ezek között két nagyon fontos van. A charset meta az oldalunk karakterkódolásáról ad információt a böngészőnek. A viewport meta elemmel pedig jelezzük a böngészőnek, hogy reszponzív, mobilra optimalizált az oldalunk
+- a `<title>` az oldalunk címe, ami a böngésző tab fülön meg is jelenik
+- a `<link>` és `<script>` elemek segítségével külső forrásból húzhatunk be stíluslapokat és scripteket
+- a `<style>` és `<script>` elemekkel belső stíluslap és script illeszthető az oldalba
 
 ## HTML5 új szemantikus elemei
 
