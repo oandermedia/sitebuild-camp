@@ -24,6 +24,10 @@ Ilyen elemek például:
 - `<link>`
 - `<meta>`
 
+A HTML elemek teljes listája (csoportosítva is):
+https://www.w3schools.com/tags/ref_byfunc.asp
+http://html5doctor.com/element-index/
+
 ## A HTMl elemek csoportosítása
 
 A HTML elemeknek két fő csoportja van: block és inline elemek. A block elemek mindig 100% szélességben kitöltik a rendelkezésre álló teret, míg az inline elemek nem. Az elemek ezen tulajdonságát CSS-ből lehet módosítani.
@@ -43,6 +47,9 @@ Példa inline elemre:
 - `<b>` - félkövér szöveget jelöl, nincs jelentés tartalma, csak stílust határoz meg
 - `<img>` - képet jeölő elem
 
+Teljes lista:
+https://www.w3schools.com/html/html_blocks.asp
+
 ## A HTML elemek attribútumai
 
 Az attribútumok között vannak olyanok, amik globálisak, bármelyik elem tartalmazhatja.
@@ -54,6 +61,7 @@ Ilyen attribútumok például:
 - `style` - egyedi stílust tehetünk az elemre
 - `title` - címmel láthatjuk el az elemet
 
+Teljes lista a globális elemekről:
 https://www.w3schools.com/tags/ref_standardattributes.asp
 
 Valamint léteznek elem specifikus attribútumok, például
@@ -62,26 +70,33 @@ Valamint léteznek elem specifikus attribútumok, például
 - `src` (img, script) - megjelöljük mi a forrás
 - `action` (form)
 
+Teljes attribútum lista (az on-al kezdődőek kihagyhatóak, nagyon ritkán használjuk)
 https://www.w3schools.com/tags/ref_attributes.asp
 
-## A weboldalak alap struktúrája
+## A weboldalak alap felépítése
 
-A HTML elemek szülő - gyermek kapcsolatban állnak egymással. Így jön létre egy szerkezet, a weboldal váza, amit DOM-nak (Document Object Model) hívunk.
+A HTML elemek szülő - gyermek kapcsolatban állnak egymással. Így jön létre egy szerkezet, a weboldal váza, amit DOM-nak (Document Object Model) hívunk. Tehát egy HTML elem vagy egy másik HTML elemet tartalmaz vagy már magát a szöveges tartalmat.
 
-Léteznek olyan elemek, ami szinte bárminek lehetnek szülei vagy gyermekei, viszont vannak speciális esetek. Ilyen például:
+Létezik több olyan elem, amik szinte bárminek lehet szülője vagy gyermeke, viszont sok elem csak bizonyos elemeknek lehet szülője vagy gyermeke. Erre néhány példa:
 
 ```html
 <ul>
   <li></li>
 </ul>
+```
 
+Tehát itt az `<ul>` -be nem tehetünk másféle elemet és a `<li>` elemet sem használhatjuk ezen kívül, de pl. egy `<ol>` elembe bele lehet tenni ugyanígy a `<li>` elemet.
+
+```html
 <dl>
   <dt></dt>
   <dd></dd>
 </dl>
 ```
 
-Weboldal alap struktúra:
+Ezekről később egy nagyobb témánál lesz szó, mi minek lehet a gyermeke és szülője.
+
+Egy website alap felépítése:
 
 ```html
 <!DOCTYPE html>
@@ -113,3 +128,6 @@ A HTML5-el bejöttek új elemek a HTML-be, amik segítik szemantikusabban felép
 - `<figure>`
 - `<figcaption>`
 - `<time>`
+
+Ezekről található leírás a következő oldalon (jól le van az is írva mire használható egy-egy elem):
+http://html5doctor.com/article-archive/
