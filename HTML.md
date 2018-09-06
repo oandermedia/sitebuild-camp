@@ -68,7 +68,7 @@ Valamint léteznek elem specifikus attribútumok, például
 
 - `href` (link, a) - hivatkozás egy forrásra
 - `src` (img, script) - megjelöljük mi a forrás
-- `action` (form)
+- `action` (form) - az űrlap feldolgozásának helyét állítja be
 
 Teljes attribútum lista (az on-al kezdődőek kihagyhatóak, nagyon ritkán használjuk)
 https://www.w3schools.com/tags/ref_attributes.asp
