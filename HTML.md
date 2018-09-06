@@ -168,20 +168,19 @@ Az oldalunk `<head>` elemébe a következő elemek kerülhetnek:
 - a `<link>` és `<script>` elemek segítségével külső forrásból húzhatunk be stíluslapokat és scripteket
 - a `<style>` és `<script>` elemekkel belső stíluslap és script illeszthető az oldalba
 
-## HTML5 új szemantikus elemei
+## HTML5 szemantikus elemei
 
-A HTML5-el bejöttek új elemek a HTML-be, amik segítik szemantikusabban felépíteni a weboldalt. Ezek az elemek a következők:
+A HTML5-tel új elemek kerültek a HTML-be. Ezek segítik szemantikusabban felépíteni a weboldalt. Korábban a weboldal egyes nagy blokkjait (fejléc, lábléc, oldalsáv stb.) egyszerűen csak egy `<div>`, általános blokk elemmel jelöltük. Azonban ez a böngészőnek semmilyen információt nem adott a blokk tartalmáról. Ezzel szemben az új elemek jelentéssel bírnak, tájékoztatják a böngészőt, hogy egy blokk fő tartalom, másodlagos (kapcsolódó) tartalom, esetleg linkeknek a halmaza stb.
 
-- `<header>`
-- `<footer>`
-- `<main>`
-- `<aside>`
-- `<nav>`
-- `<section>`
-- `<article>`
-- `<figure>`
-- `<figcaption>`
-- `<time>`
+Szemantikusság szempontjából legfontosabb elemek:
 
-Ezekről található leírás a következő oldalon (jól le van az is írva mire használható egy-egy elem):
+- a `<header>` a weboldalunk fő fejlécét vagy egy cikkünk fejlécét jelölheti
+- a `<footer>` szintén a weboldal fő láblécét vagy egy szekció láblécét jelöli (ezek főleg marginális információk)
+- a `<main>` elem a weboldalunk fő blokkját definiálja (egyszer szerepelhet az oldalon)
+- az `<aside>` elem a weboldal másodlagos tartalmát jelöli, ez lehet egy teljes oldalsáv vagy egy cikken belüli szószedet
+- a `<nav>` elem az oldalon elhelyezett linkek csoportját definiálja (de nem minden linkcsoportot kell ilyen elembe helyezni)
+- a `<section>` elem az oldalunk egy általános szekcióját határozza meg
+- az `<article>` elem segítségével az oldalunk egy olyan komponensét jelölhetjük, ami függetleníthető az oldal többi elemétől és újra felhasználható, sokszorosítható. Ilyen pl. egy blog bejegyzés, fórum hozzászólás stb.
+
+Részletesebb leírást ezekről az elemekről itt olvashattok:
 http://html5doctor.com/article-archive/
