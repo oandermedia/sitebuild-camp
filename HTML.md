@@ -98,3 +98,18 @@ Weboldal alap struktúra:
   </body>
 </html>
 ```
+
+## HTML5 új szemantikus elemei
+
+A HTML5-el bejöttek új elemek a HTML-be, amik segítik szemantikusabban felépíteni a weboldalt. Ezek az elemek a következők:
+
+- `<header>`
+- `<footer>`
+- `<main>`
+- `<aside>`
+- `<nav>`
+- `<section>`
+- `<article>`
+- `<figure>`
+- `<figcaption>`
+- `<time>`
