@@ -1,1 +1,1 @@
-# sitebuild-training-camp
+# sitebuild-camp
