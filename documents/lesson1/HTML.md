@@ -148,12 +148,12 @@ Az oldalunk `<head>` elemébe a következő elemek kerülhetnek:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   ... további meta elemek (pl. SEO keywords, description stb.)
-  
+
   <title>Hello World</title>
-  
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js">Hello World</script>
-  
+
   <style>
     ... belső stíluslap ...
   </style>
@@ -188,4 +188,5 @@ http://html5doctor.com/article-archive/
 ## Hasznos linkek
 
 HTML validáló - http://validator.w3.org/#validate_by_input
+
 HTML elemek és CSS tulajdonságok böngésző kompatibilitása - https://caniuse.com/
