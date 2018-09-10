@@ -1,32 +1,36 @@
 # HTML
 
-A HTML (HyperText Markup Language) egy leíró nyelv, ami a weboldal tartalom struktúrájáért felel, a vázát adja és a tartalmat jelentéssel látja el.
+A HTML (HyperText Markup Language) egy leíró nyelv, ami a weboldal tartalom struktúrájáért felel, a vázát adja és a tartalom egyes elemeit jelentéssel látja el.
 
-## A HTML szintaktikája
+## A HTML elemek és szintaktikájuk
 
 A HTML építőkövei a HTML elemek. Egy elem a legtöbb esetben egy nyitó címkéből, egy záró címkéből és a közte lévő tartalomból épül fel. Valamint a nyitó címke attribútumokat tartalmazhat, amik többlet információval látják el az elemet.
 
 `<a href="http://oander.hu" target="_blank">...</a>`
 
-- az `<a>...</a>` maga az elem
-- az `<a>` a nyitó címke
-- az `</a>` a záró címke
-- a `href="http://oander.hu"` az attribútum
+- az `<a>... ide kerül a tartalom ...</a>` a HTML elem
+- az `<a>` az elem nyitó címkéje
+- az `</a>` az elem záró címkéje
+- a `href="http://oander.hu"` az elem egyik attribútuma
 
-Vannak olyan elemek, amik nem rendelkeznek záró címkével, így értelemszerűen tartalom sem lehet a két tag között. Ezek az elemek az attribútumok segítségével kapják meg az információt.
+Vannak olyan elemek, amik nem rendelkeznek záró címkével, így értelemszerűen tartalom sem lehet a két címke között. Ezek az elemek az attribútumok segítségével kapják meg az információt.
 
 Ilyen elemek például:
 
-- `<img>`
-- `<input>`
-- `<br>`
-- `<hr>`
-- `<link>`
-- `<meta>`
+- `<img>` - képet definiáló elem
+- `<input>` - űrlap mezőt meghatározó elem
+- `<br>` - sortörés egy szövegben
+- `<hr>` - elválasztó vonalat jelölő elem
+- `<link>` - külső stíluslap behúzására szolgáló elem
+- `<meta>` - a weboldal head részében használható, meta információkat szolgáltató elem (SEO adatok, karakterkódolás stb.)
 
-## A HTMl elemek csoportosítása
+A HTML elemek teljes listája (csoportosítva is):
+https://www.w3schools.com/tags/ref_byfunc.asp
+http://html5doctor.com/element-index/
 
-A HTML elemeknek két fő csoportja van: block és inline elemek. A block elemek mindig 100% szélességben kitöltik a rendelkezésre álló teret, míg az inline elemek nem. Az elemek ezen tulajdonságát CSS-ből lehet módosítani.
+## A HTML elemek csoportosítása
+
+A HTML elemeknek két fő csoportja van: block és inline elemek. A block elemek mindig 100% szélességben kitöltik a rendelkezésre álló teret, függetlenül attól milyen hosszú tartalom van az elemben. Az előttük és utánuk lévő elem mindig új sorban kezdődik a böngészőben. Ezzel szemben az inline elemek csak akkora szélességet foglalnak el, amekkora a tartalmuk, mellettük elhelyezkedhet további elemek. Az elemek block vagy inline tulajdonságát CSS-ből lehet módosítani.
 
 Példa blokk elemre:
 
@@ -41,75 +45,147 @@ Példa inline elemre:
 - `<a>` - hivatkozás elem
 - `<strong>` - félkövér szöveget jelöl, jelentés tartalommal bír
 - `<b>` - félkövér szöveget jelöl, nincs jelentés tartalma, csak stílust határoz meg
-- `<img>` - képet jeölő elem
+- `<img>` - képet jelölő elem
 
-## A HTML elemek attribútumai
+Teljes lista az elemek block / inline csoportosításáról:
+https://www.w3schools.com/html/html_blocks.asp
 
-Az attribútumok között vannak olyanok, amik globálisak, bármelyik elem tartalmazhatja.
+## A HTML elemek attribútumai és szintaktikájuk
 
-Ilyen attribútumok például:
+A HTML elemek egy vagy több attribútumot tartalmazhatnak, több esetén szóközzel elválasztva. Az attribútumok felépítése a következő:
+
+`href="http://oander.hu" target="_blank"`
+
+- a `href` az attribútum neve
+- az `=` az összekapcsolás
+- a `"http://oander.hu"` az attribútum értéke
+
+Az attribútumok értéke nagyon változatos lehet. Tartalmazhat pl. egy url címet, egy szöveget, egy paramétert vagy több paramétert.
+
+Néhány példa attribútumok érték típusaira:
+
+- `alt="Ez itt egy kép leírása"` - szöveges érték
+- `href="http://oander.hu"` - url érték
+- `type="text"` - egy paraméter
+- `class="button button-large button-red"` - több paraméter szóközzel elválasztva
+- `content="width=device-width, initial-scale=1.0"` - több paraméter vesszővel elválasztva
+
+## A HTML elemek attribútumainak csoportosítása
+
+Az attribútumok között vannak olyanok, amik globálisak, bármelyik elemen el lehet helyezni:
 
 - `id` - egyedi azonosítóval látja el az elemet
-- `class` - csoportosíthatjuk vele az elemet
+- `class` - osztály azonosítóval látja el az elemet
 - `style` - egyedi stílust tehetünk az elemre
 - `title` - címmel láthatjuk el az elemet
 
-https://www.w3schools.com/tags/ref_standardattributes.asp
-
-Valamint léteznek elem specifikus attribútumok, például
+Valamint léteznek elem specifikus attribútumok (zárójelben azon elemek, ahol elhelyezhetőek):
 
 - `href` (link, a) - hivatkozás egy forrásra
 - `src` (img, script) - megjelöljük mi a forrás
-- `action` (form)
+- `action` (form) - az űrlap feldolgozásának helyét állítja be
 
+Teljes attribútum lista (az on-al kezdődőek kihagyhatóak, nagyon ritkán használjuk)
 https://www.w3schools.com/tags/ref_attributes.asp
 
-## A weboldalak alap struktúrája
+Teljes lista a globális attribútumokról:
+https://www.w3schools.com/tags/ref_standardattributes.asp
 
-A HTML elemek szülő - gyermek kapcsolatban állnak egymással. Így jön létre egy szerkezet, a weboldal váza, amit DOM-nak (Document Object Model) hívunk.
+## A HTML elemek struktúrája, a DOM
 
-Léteznek olyan elemek, ami szinte bárminek lehetnek szülei vagy gyermekei, viszont vannak speciális esetek. Ilyen például:
+Egy HTML elem (a záró címke nélküli elemek kivételével) tartalma lehet egy szöveg vagy egy másik HTML elem. Utóbbi esetben ezzel az egymásba ágyazással az elemek között egy szülő - gyermek kapcsolat, valamint az egy szinten lévő, egymást követő HTML elemek között egy testvér - testvér kapcsolat jön létre. Ezen kapcsolatok által kialakul egy szerkezet, ami a weboldal váza. Ezt nevezzük DOM-nak (Document Object Model).
+
+Szabályozva van viszont, hogy az elemeknek milyen gyermek elemeik lehetnek, illetve mi lehet a szülő elemük. Ezeket a szabályokat a későbbi órák folyamán fokozatosan át fogjuk venni, amikor az elemek egy-egy csoportjáról tanulunk.
+
+Említés szintjén néhány példa álljon itt:
 
 ```html
 <ul>
   <li></li>
 </ul>
+```
 
+Az `<ul>` elemnek csakis a `<li>` elemek lehetnek a gyermekei, a `<li>` elem viszont rendelkezhet másik szülővel, például az `<ol>` elembe is elhelyezhető.
+A `<li>` elemnek viszont már nagyon sokféle gyermek eleme lehet, pl. egy `<a>` vagy egy `<div>` elem.
+
+```html
 <dl>
   <dt></dt>
   <dd></dd>
 </dl>
 ```
 
-Weboldal alap struktúra:
+Itt kicsit más a helyzet, a `<dl>` elem `<dt>` és `<dd>` elemeket tartalmazhat. Ezek az elemek pedig csak a `<dl>` elem gyermekei lehetnek.
+
+## A weboldal alap felépítése
+
+Minden weboldalnak a következő HTML szerkezettel kell kezdődnie:
 
 ```html
 <!DOCTYPE html>
 <html lang="hu">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hello World</title>
+    ... nem látható, de fontos információk ...
   </head>
   <body>
-    <h1>Hello World</h1>
-    <p>This is a web page.</p>
+    ... látható tartalom ...
   </body>
 </html>
 ```
 
-## HTML5 új szemantikus elemei
+- a `<!DOCTYPE html>` mondja meg a böngészőnek, hogy a weboldalunk milyen szabálykönyv szerint íródott
+- a `<html>` elem minden weboldal első HTML eleme, ez definiálja a teljes weboldalt
+- a `lang="hu"` attribútum tájékoztatja a böngészőt az oldalunk nyelvéről
+- a `<head>` elem tartalmazza a weboldalunk 'nem látható', de fontos információit
+- a `<body>` elem tartalmazza a weboldal látható részét, tartalmát
 
-A HTML5-el bejöttek új elemek a HTML-be, amik segítik szemantikusabban felépíteni a weboldalt. Ezek az elemek a következők:
+## A head rész elemei
 
-- `<header>`
-- `<footer>`
-- `<main>`
-- `<aside>`
-- `<nav>`
-- `<section>`
-- `<article>`
-- `<figure>`
-- `<figcaption>`
-- `<time>`
+Az oldalunk `<head>` elemébe a következő elemek kerülhetnek:
+
+```html
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  ... további meta elemek (pl. SEO keywords, description stb.)
+  
+  <title>Hello World</title>
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js">Hello World</script>
+  
+  <style>
+    ... belső stíluslap ...
+  </style>
+  <script>
+    ... belső script ...
+  </script>
+</head>
+```
+
+- többféle meta elemet tartalmazhat a weboldalunk, de ezek között két nagyon fontos van. A charset meta az oldalunk karakterkódolásáról ad információt a böngészőnek. A viewport meta elemmel pedig jelezzük a böngészőnek, hogy reszponzív, mobilra optimalizált az oldalunk
+- a `<title>` az oldalunk címe, ami a böngésző tab fülön meg is jelenik
+- a `<link>` és `<script>` elemek segítségével külső forrásból húzhatunk be stíluslapokat és scripteket
+- a `<style>` és `<script>` elemekkel belső stíluslap és script illeszthető az oldalba
+
+## HTML5 szemantikus elemei
+
+A HTML5-tel új elemek kerültek a HTML-be. Ezek segítik szemantikusabban felépíteni a weboldalt. Korábban a weboldal egyes nagy blokkjait (fejléc, lábléc, oldalsáv stb.) egyszerűen csak egy `<div>`, általános blokk elemmel jelöltük. Azonban ez a böngészőnek semmilyen információt nem adott a blokk tartalmáról. Ezzel szemben az új elemek jelentéssel bírnak, tájékoztatják a böngészőt, hogy egy blokk fő tartalom, másodlagos (kapcsolódó) tartalom, esetleg linkeknek a halmaza stb.
+
+Szemantikusság szempontjából legfontosabb elemek:
+
+- a `<header>` a weboldalunk fő fejlécét vagy egy cikkünk fejlécét jelölheti
+- a `<footer>` szintén a weboldal fő láblécét vagy egy szekció láblécét jelöli (ezek főleg marginális információk)
+- a `<main>` elem a weboldalunk fő blokkját definiálja (egyszer szerepelhet az oldalon)
+- az `<aside>` elem a weboldal másodlagos tartalmát jelöli, ez lehet egy teljes oldalsáv vagy egy cikken belüli szószedet
+- a `<nav>` elem az oldalon elhelyezett linkek csoportját definiálja (de nem minden linkcsoportot kell ilyen elembe helyezni)
+- a `<section>` elem az oldalunk egy általános szekcióját határozza meg
+- az `<article>` elem segítségével az oldalunk egy olyan komponensét jelölhetjük, ami függetleníthető az oldal többi elemétől és újra felhasználható, sokszorosítható. Ilyen pl. egy blog bejegyzés, fórum hozzászólás stb.
+
+Részletesebb leírást ezekről az elemekről itt olvashattok:
+http://html5doctor.com/article-archive/
+
+## Hasznos linkek
+
+HTML validáló - http://validator.w3.org/#validate_by_input
+HTML elemek és CSS tulajdonságok böngésző kompatibilitása - https://caniuse.com/
