@@ -1,3 +1,45 @@
+/* segéd class a float elemek clear-ezéséhez */
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+/* header dolgai */
+body {
+  padding-top: 132px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 1;
+}
+
+.header .logo {
+  float: left;
+}
+
+.header .navigation {
+  float: right;
+}
+
+/* tartalmi elemek */
+.content .post {
+  float: left;
+  width: 65%;
+}
+
+.content .sidebar {
+  float: right;
+  width: 35%;
+}
+
 .meta {
   margin: 0 auto;
   width: 200px;
@@ -20,4 +62,57 @@ blockquote::before {
 
 blockquote p {
   display: inline;
+}
+
+.post-content {
+  position: relative;
+}
+
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.float-parent img {
+  float: left;
+  margin-right: 20px;
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #000;
+}
+
+.box.box--relative {
+  position: relative;
+}
+
+.box.box--fixed {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  background-color: #fff;
+}
+
+.box.box--absolute {
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+  background-color: #fff;
+}
+
+.float-parent {
+  position: relative;
+}
+
+.gallery .image-01 {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+
+.gallery .image-02 {
+  float: left;
+  width: 48%;
 }
