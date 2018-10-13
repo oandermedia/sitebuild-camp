@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sitebuild Camp</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/homework/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/homework/homework.css" />
 </head>
-
 <body>
 <header class="header clearfix">
     <div class="inner">
         <img src="assets/images/logo.svg" alt="Oander" class="logo">
+
+        <div class="header-search">
+            <input type="text" placeholder="keresés..." class="header-search-input" />
+        </div>
 
         <nav class="navigation">
             <ul>
@@ -29,11 +34,10 @@
 
 <main class="content">
     <div class="inner clearfix">
-
         <article class="post">
             <header class="post-header">
-                <h1 class="post-title"><strong>Nestor Ferronato</strong> My relationship with time is frantic – it’s never
-                    enough for me</h1>
+                <h1 class="post-title"><strong>Nestor Ferronato</strong>
+                    My relationship with time is frantic – it’s never enough for me</h1>
                 <p class="post-meta">
                     <span class="post-author">via WeTransfer</span> —
                     <span class="post-date">2018.09.05.</span>
@@ -83,13 +87,24 @@
                 <p>Maecenas vitae odio turpis. Aliquam nec commodo magna, sit amet pretium sapien. Donec purus urna, blandit et metus in, cursus eleifend ex. Sed euismod vehicula ante, non congue lacus malesuada quis. Nam nec metus a justo suscipit tincidunt. Duis risus lectus, facilisis ut dapibus et, fringilla quis purus. Mauris quis velit ac lectus varius bibendum. Cras aliquam magna vel molestie dapibus. Etiam vestibulum quam odio, eu consectetur arcu imperdiet eu. Duis at vulputate est. Nam vel vulputate massa, nec condimentum elit. Aenean malesuada ex vel lectus mattis porttitor. Mauris tempus laoreet felis nec aliquet. Proin vel sollicitudin nisi. In a posuere enim, a dapibus mauris. Ut tristique fermentum turpis id vestibulum.</p>
 
                 <div class="float-parent">
-                    <img src="assets/images/breguet-22-rue-vivienne.jpg" alt="Breguet 22 - Rue Vivienne">
+                    <div class="badge-container">
+                        <img src="assets/images/breguet-22-rue-vivienne.jpg" alt="Breguet 22 - Rue Vivienne">
+                    </div>
                     <p>Maecenas vitae odio turpis. Aliquam nec commodo magna, sit amet pretium sapien. Donec purus urna, blandit et metus in, cursus eleifend ex. Sed euismod vehicula ante, non congue lacus malesuada quis. Nam nec metus a justo suscipit tincidunt. Duis risus lectus, facilisis ut dapibus et, fringilla quis purus. Mauris quis velit ac lectus varius bibendum. Cras aliquam magna vel molestie dapibus. Etiam vestibulum quam odio, eu consectetur arcu imperdiet eu. Duis at vulputate est. Nam vel vulputate massa, nec condimentum elit. Aenean malesuada ex vel lectus mattis porttitor. Mauris tempus laoreet felis nec aliquet. Proin vel sollicitudin nisi. In a posuere enim, a dapibus mauris. Ut tristique fermentum turpis id vestibulum.</p>
                 </div>
 
                 <p>Maecenas vitae odio turpis. Aliquam nec commodo magna, sit amet pretium sapien. Donec purus urna, blandit et metus in, cursus eleifend ex. Sed euismod vehicula ante, non congue lacus malesuada quis. Nam nec metus a justo suscipit tincidunt. Duis risus lectus, facilisis ut dapibus et, fringilla quis purus. Mauris quis velit ac lectus varius bibendum. Cras aliquam magna vel molestie dapibus. Etiam vestibulum quam odio, eu consectetur arcu imperdiet eu. Duis at vulputate est. Nam vel vulputate massa, nec condimentum elit. Aenean malesuada ex vel lectus mattis porttitor. Mauris tempus laoreet felis nec aliquet. Proin vel sollicitudin nisi. In a posuere enim, a dapibus mauris. Ut tristique fermentum turpis id vestibulum.</p>
 
                 <p>Pellentesque tincidunt molestie risus, et efficitur elit eleifend vitae. Nam finibus, justo eget euismod bibendum, tellus ipsum euismod elit, eu semper massa ipsum eget nulla. Aenean et tempus tellus. Donec facilisis hendrerit mollis. Praesent nec finibus sapien. Aliquam fermentum, ex quis lobortis vulputate, libero lacus commodo elit, eu cursus nisi sapien ut nunc. Nulla ante lacus, fringilla varius pharetra a, venenatis vitae purus. Maecenas eleifend, nulla a pellentesque tincidunt, magna orci tempor metus, ut bibendum quam quam pretium ligula. Praesent tempus venenatis dolor, ut rhoncus ex sollicitudin ac. Donec lacinia quis nibh non pulvinar. Sed fermentum hendrerit tellus vel lobortis. Phasellus mollis mauris quis sapien accumsan imperdiet. Vestibulum lacinia ligula blandit elementum lobortis. Fusce mollis vitae massa sit amet imperdiet.</p>
+
+
+                <div class="related-article">
+                    <div class="badge-container">
+                        <img src="assets/images/breguet-22-rue-vivienne.jpg" alt="Breguet 22 - Rue Vivienne">
+
+                    </div>
+                    <p>Maecenas vitae odio turpis. Aliquam nec commodo magna, sit amet pretium sapien. Donec purus urna, blandit et metus in, cursus eleifend ex. Sed euismod vehicula ante, non congue lacus malesuada quis. Nam nec metus a justo suscipit tincidunt. Duis risus lectus, facilisis ut dapibus et, fringilla quis purus. Mauris quis velit ac lectus varius bibendum. Cras aliquam magna vel molestie dapibus. Etiam vestibulum quam odio, eu consectetur arcu imperdiet eu. Duis at vulputate est. Nam vel vulputate massa, nec condimentum elit. Aenean malesuada ex vel lectus mattis porttitor. Mauris tempus laoreet felis nec aliquet. Proin vel sollicitudin nisi. In a posuere enim, a dapibus mauris. Ut tristique fermentum turpis id vestibulum.</p>
+                </div>
 
                 <h4>He began painting looping ribbons moving in and out of the watch parts.</h4>
 
@@ -103,8 +118,10 @@
                     keen to see how their craftsmanship is being appreciated.</p>
 
                 <div class="gallery clearfix">
-                    <img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01">
-                    <img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-02">
+                    <img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01" />
+                    <img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-02" />
+                    <img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-03" />
+                    <img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-04" />
                 </div>
 
                 <h4>Photos</h4>
@@ -118,7 +135,6 @@
         </article>
 
         <aside class="sidebar">
-
             <form action="" class="search">
                 <div class="search-group">
                     <input type="text" name="search" placeholder="Search..." class="search-input">
@@ -130,7 +146,6 @@
 
             <div class="block post-categories">
                 <h5>Categories</h5>
-
                 <ul>
                     <li><a href="#">News</a></li>
                     <li><a href="#">Announcements</a></li>
@@ -140,35 +155,22 @@
 
             <div class="block recent-posts">
                 <h5>Recent posts</h5>
-
                 <ul>
-                    <li><a href="#">Stuff They Don't Tell You Copyright and your work</a></li>
-                    <li><a href="#">Mirka Laura Severa When we look quickly at something, we don’t realize what we’re seeing</a></li>
-                    <li><a href="#">The Summer of Love A sense of fun and togetherness, mixed with something slightly odd</a></li>
+                    <li>
+                        <a href="#" class="recent-post-image"><img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01" /></a>
+                        <a href="#" class="recent-post-title">Stuff They Don't Tell You Copyright and your work</a>
+                    </li>
+                    <li>
+                        <a href="#" class="recent-post-image"><img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01" /></a>
+                        <a href="#" class="recent-post-title">Mirka Laura Severa When we look quickly at something, we don’t realize what we’re seeing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="recent-post-image"><img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01" /></a>
+                        <a href="#" class="recent-post-title">The Summer of Love A sense of fun and togetherness, mixed with something slightly odd</a>
+                    </li>
                 </ul>
             </div>
         </aside>
-    </div>
-
-    <div class="flexbox">
-        <div class="flexbox-item green"></div>
-        <div class="flexbox-item yellow"></div>
-        <div class="flexbox-item red"></div>
-        <div class="flexbox-item blue"></div>
-    </div>
-
-    <div class="flexbox flexbox2">
-        <div class="flexbox-item2 green"></div>
-        <div class="flexbox-item2 yellow"></div>
-        <div class="flexbox-item2 red"></div>
-        <div class="flexbox-item2 blue"></div>
-    </div>
-
-    <div class="related">
-        <div class="related-image1"><img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01"></div>
-        <div class="related-image2"><img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01"></div>
-        <div class="related-image3"><img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01"></div>
-        <div class="related-image4"><img src="assets/images/swizzerland.jpg" alt="Swizzerland" class="image-01"></div>
     </div>
 </main>
 
@@ -184,6 +186,5 @@
         </p>
     </div>
 </footer>
-
 </body>
 </html>
