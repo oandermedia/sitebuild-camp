@@ -1,0 +1,26 @@
+.header-inner {
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+/* UL tag */
+.header-navigation {
+    display: flex;
+    margin: 0 0 0 auto; /* top: 0; right: 0; bottom: 0; left: auto; */
+    padding: 0;
+    list-style: none;
+}
+
+.header-navigation > li {
+    margin: 0 10px;
+}
+
+/* Az utolsó LI elem-re fog csak vonatkozni */
+.header-navigation > li:last-child {
+    margin-right: 0;
+}
+
+.header-navigation > li > a {
+    color: #414141;
+}

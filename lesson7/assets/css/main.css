@@ -1,3 +1,98 @@
 body {
     font-family: 'Montserrat', sans-serif;
 }
+
+/* Mindegyik section fog kapni "30px 0" padding-ot, a slider-t leszámítva */
+.main > section:not(.slider) {
+    padding: 30px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.section-title span {
+    color: #007bff;
+}
+
+/* Slider */
+.slider-inner {
+    width: 1500px;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider-inner img {
+    max-width: 100%;
+}
+
+.slider-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.slider-text {
+    font-size: 30px;
+    font-weight: 700;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* #000 - 70% opacity */
+}
+
+/* About us */
+.about-us-inner {
+    display: flex;
+    align-items: center;
+}
+
+.about-us-image,
+.about-us-text {
+    width: 50%;
+    padding: 0 10px;
+}
+
+.about-us-image img {
+    max-width: 100%;
+}
+
+/* Our services */
+.our-services {
+    background: #f3f3f3;
+}
+
+.our-services .section-title {
+    margin-bottom: 30px;
+}
+
+.our-services .usp-col {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.our-services .usp-icon {
+    margin-right: 10px;
+    font-size: 40px;
+}
+
+.our-services .usp-text h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Featured work images */
+.featured-work-images .col-image {
+    padding: 0;
+}
+
+.featured-work-images img {
+    width: 100%;
+    max-width: 100%;
+}
