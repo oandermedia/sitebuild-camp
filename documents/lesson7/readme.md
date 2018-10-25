@@ -18,6 +18,6 @@
   - `fa fa-camera-retro`
   - `fa fa-coffee `
 - használt színek (opcionális):
-  - szöveg: #414141
-  - kék (linkek, kiemelt színek): #00bcd4 (használható a boostrap alap kék színe is: #007bff)
-  - ikon: #a1a1a1
+  - szöveg: `#414141`
+  - kék (linkek, kiemelt színek): `#00bcd4` (használható a boostrap alap kék színe is: `#007bff`)
+  - ikon: `#a1a1a1`
