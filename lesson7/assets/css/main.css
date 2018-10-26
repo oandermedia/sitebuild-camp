@@ -72,14 +72,14 @@ body {
     margin-bottom: 30px;
 }
 
-.our-services .usp-col {
+.our-services .usp-content {
     display: flex;
     margin-bottom: 20px;
 }
 
 .our-services .usp-icon {
-    margin-right: 10px;
-    font-size: 40px;
+    margin-right: 15px;
+    font-size: 50px;
 }
 
 .our-services .usp-text h3 {
@@ -88,6 +88,10 @@ body {
 }
 
 /* Featured work images */
+.featured-work .section-title {
+    margin-bottom: 30px;
+}
+
 .featured-work-images .col-image {
     padding: 0;
 }
@@ -95,4 +99,9 @@ body {
 .featured-work-images img {
     width: 100%;
     max-width: 100%;
+}
+
+/* Contact US */
+.contact-us .section-title {
+    margin-bottom: 30px;
 }
